@@ -1,16 +1,14 @@
 <h1>New Track</h1>
-
 <%= form_for :track, url: tracks_path do |f| %>
 
-<div class="form-group">
-  <label>Choose PL carrier:</label>
-  <select name="pl[name]" id="pl">
-    <option value="1" selected="selected"></option>
-    <option value="Foreign">Foreign</option>
-    <option value="Cardi">Cardi</option>
-  </select>
-  </div>
   <p>
-   <%= f.submit %>
- </p>
+      <%= f.label :truck_by %><br />
+      <%= f.text_field :truck_by %>
+    </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+
+
 <% end %>

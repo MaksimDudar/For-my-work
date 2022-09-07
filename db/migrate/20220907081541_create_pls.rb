@@ -6,8 +6,5 @@ class CreatePls < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    pl.create :name => 'Foreign'
-    pl.create :name => 'Cardi'
-
   end
 end
