@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pl: MyString
+  truck_by: MyString
+  driver_by: MyString
+  perecep: MyString
+  truck_rus: MyString
+  driver_rus: MyString
+  semi_trailer: MyString
+  country: MyString
+
+two:
+  pl: MyString
+  truck_by: MyString
+  driver_by: MyString
+  perecep: MyString
+  truck_rus: MyString
+  driver_rus: MyString
+  semi_trailer: MyString
+  country: MyString
