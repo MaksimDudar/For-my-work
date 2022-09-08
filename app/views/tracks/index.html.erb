@@ -1,4 +1,4 @@
-<h1>List of tracks</h1>
+<h1>All tracks</h1>
 <p><%= link_to 'NEW Track', track_path([:new]) %></p><hr/>
 
 <% @tracks.each do |track| %><hr/>
@@ -11,4 +11,13 @@
 <%= track.driver_rus %> ||
 <%= track.semi_trailer %> ||
 <%= track.country %> ||
+
+<p>
+  <%= link_to 'Show', track_path(track) %> ||
+  <%= link_to 'Edit', edit_track_path(track) %>
+  <%= button_to 'Delete', track_path(track), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %>
+
+  </p>
+  <hr />
+
 <% end %>

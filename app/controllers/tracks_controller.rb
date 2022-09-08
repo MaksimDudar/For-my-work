@@ -23,6 +23,21 @@ class TracksController < ApplicationController
     end
   end
 
+  def edit
+    @track = Track.find(params[:id])
+  end
+
+  def update
+    @track = Track.find(params[:id])
+    if @track.update(track_params)
+      redirect_to @track
+    else
+      render action: 'edit'
+    end
+  end
+
+
+
   def track_params
     params.require(:track).permit(:pl, :truck_by, :driver_by, :perecep, :truck_rus, :driver_rus, :semi_trailer, :country)
     end
