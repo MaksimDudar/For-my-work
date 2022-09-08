@@ -1,15 +1,75 @@
 <h1>New Track</h1>
+
 <%= form_for :track, url: tracks_path do |f| %>
+<p><label>PL carrier:</label>
+<select id="pl" name="track[pl]">
+  <option value="1" selected="selected"></option>
+  <option value="Foreign">Foreign</option>
+  <option value="Cardi">Cardi</option>
+</select></p>
 
-  <p>
-      <%= f.label :truck_by %><br />
-      <%= f.text_field :truck_by %>
-    </p>
+<p><label>Truck BY:</label>
+<select id="truck_by" name="track[truck_by]">
+  <option value="1" selected="selected"></option>
+  <option value="AH6192-1">AH6192-1</option>
+  <option value="AH6193-1">AH6193-1</option>
+  <option value="AH3929-1">AH3929-1</option>
+  <option value="AM0437-1">AM0437-1</option>
+  <option value="AM2225-1">AM2225-1</option>
+  <option value="AM2226-1">AM2226-1</option>
+  <option value="AM8272-1">AM8272-1</option>
+  <option value="AM8273-1">AM8273-1</option>
+  <option value="AM2140-1">AM2140-1</option>
+  <option value="AM2141-1">AM2141-1</option>
+  <option value="AI5795-1">AI5795-1</option>
+  <option value="AI5796-1">AI5796-1</option>
+  <option value="AI4414-1">AI4414-1</option>
+  <option value="AI4415-1">AI4415-1</option>
+  <option value="AH9715-1">AH9715-1</option>
+  <option value="AH9716-1">AH9716-1</option>
+  <option value="AH7639-1">AH7639-1</option>
+  <option value="AH7640-1">AH7640-1</option>
+  <option value="AM1088-1">AM1088-1</option>
+  <option value="AM1089-1">AM1089-1</option>
+  <option value="AK7939-1">AK7939-1</option>
+  <option value="AM3280-1">AM3280-1</option>
+  <option value="AM0084-1">AM0084-1</option>
+  <option value="AM4309-1">AM4309-1</option>
+  <option value="AH8939-1">AH8939-1</option>
+  <option value="AP1728-1">AP1728-1</option>
+</select></p>
 
-    <p>
-        <%= f.label :pl %><br />
-        <%= f.text_field :pl %>
-      </p>
+<p><label>Driver BY:</label>
+<select id="driver_by" name="track[driver_by]">
+  <option value="1" selected="selected"></option>
+  <option value="Омеленецкий Сергей Павлович">Омеленецкий Сергей Павлович</option>
+  <option value="Кириченко Сергей Анатольевич">Кириченко Сергей Анатольевич</option>
+  <option value="Халецкий Виктор Станиславович">Халецкий Виктор Станиславович</option>
+  <option value="Кузавка Виктор Николаевич ">Кузавка Виктор Николаевич </option>
+  <option value="Марчук Владимир Михайлович">Марчук Владимир Михайлович</option>
+  <option value="Митягин Олег Александрович">Митягин Олег Александрович</option>
+  <option value="Панасевич Сергей Григорьевич">Панасевич Сергей Григорьевич</option>
+  <option value="Мартынюк Валерий Петрович">Мартынюк Валерий Петрович</option>
+  <option value="Лойчиц Валерий Ярославович">Лойчиц Валерий Ярославович</option>
+  <option value="Свитящук Сергей Николаевич">Свитящук Сергей Николаевич</option>
+  <option value="Сацюк Максим Олегович">Сацюк Максим Олегович</option>
+  <option value="Рудюк Павел Анатольевич">Рудюк Павел Анатольевич</option>
+  <option value="Барановский Олег Евгеньевич">Барановский Олег Евгеньевич</option>
+  <option value="Кузавка Павел Викторович">Кузавка Павел Викторович</option>
+  <option value="Бакун Владимир Владимирович">Бакун Владимир Владимирович</option>
+  <option value="Гаврильков Валерий Владимирович">Гаврильков Валерий Владимирович</option>
+  <option value="Горустович Алексей Николаевич">Горустович Алексей Николаевич</option>
+  <option value="Макаревич Игорь Степанович">Макаревич Игорь Степанович</option>
+  <option value="Альфер Андрей Иванович">Альфер Андрей Иванович</option>
+  <option value="Прихач Юрий Сергеевич">Прихач Юрий Сергеевич</option>
+  <option value="Камушкин Алексей Васильевич">Камушкин Алексей Васильевич</option>
+  <option value="Бондарук Александр Николаевич">Бондарук Александр Николаевич</option>
+  <option value="Демаков Алексей Алексеевич">Демаков Алексей Алексеевич</option>
+</select></p>
+
+
+
+
   <p>
     <%= f.submit %>
   </p>
