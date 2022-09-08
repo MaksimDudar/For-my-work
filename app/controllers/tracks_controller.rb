@@ -2,17 +2,19 @@ class TracksController < ApplicationController
 
   def index
     @tracks = Track.all
+    @tracks = Track.order(created_at: :desc)
+
   end
 
   def show
     @track = Track.find(params[:id])
-
   end
 
   def new
   end
 
   def create
+
     @track = Track.new(track_params)
     if @track.save
       redirect_to @track
