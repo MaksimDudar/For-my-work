@@ -2,15 +2,22 @@
 
 <%= form_for :track, url: tracks_path do |f| %>
 <p><label>PL перевзчик:</label>
+
 <select id="pl" name="track[pl]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="Чужой">Чужой</option>
-  <option value="Cardi">Cardi</option>
-</select></p>
+  <option value="LB 85124">LB 85124</option>
+  <option value="LB 85192">LB 85192</option>
+  <option value="LB 85532">LB 85532</option>
+  <option value="WGM3638F">WGM3638F</option>
+  <option value="WGM3639F">WGM3639F</option>
+  <option value="WPR6744P">WPR6744P</option>
+</select>
+</p>
 
 <p><label>Тягач BY:</label>
 <select id="truck_by" name="track[truck_by]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="AH6192-1">AH6192-1</option>
   <option value="AH6193-1">AH6193-1</option>
   <option value="AH3929-1">AH3929-1</option>
@@ -41,7 +48,7 @@
 
 <p><label>Водитель BY:</label>
 <select id="driver_by" name="track[driver_by]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="Омеленецкий Сергей Павлович">Омеленецкий Сергей Павлович</option>
   <option value="Кириченко Сергей Анатольевич">Кириченко Сергей Анатольевич</option>
   <option value="Халецкий Виктор Станиславович">Халецкий Виктор Станиславович</option>
@@ -69,14 +76,14 @@
 
 <p><label>Перецеп/довоз:</label>
 <select id="perecep" name="track[perecep]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="Перецеп">Перецеп</option>
   <option value="Довоз">Довоз</option>
 </select></p>
 
 <p><label>Тягач RUS:</label>
 <select id="truck_rus" name="track[truck_rus]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="М327КР67">М327КР67</option>
   <option value="A994EA67">A994EA67</option>
   <option value="А238КУ67">А238КУ67</option>
@@ -91,7 +98,7 @@
 
 <p><label>Водитель RUS:</label>
 <select id="driver_rus" name="track[driver_rus]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="Короб Александр Александрович">Короб Александр Александрович</option>
   <option value="Наврось Юрий Витальевич">Наврось Юрий Витальевич</option>
   <option value="Пойта Александр Николаевич">Пойта Александр Николаевич</option>
@@ -102,7 +109,7 @@
 
 <p><label>Прицеп:</label>
 <select id="semi_trailer" name="track[semi_trailer]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="A 0141 B-1">A 0141 B-1</option>
   <option value="A 0142 B-1">A 0142 B-1</option>
   <option value="A 1573 B-1">A 1573 B-1</option>
@@ -151,7 +158,7 @@
 
 <p><label>Назначение:</label>
 <select id="country" name="track[country]">
-  <option value="1" selected="selected"></option>
+  <option value=" " selected="selected"></option>
   <option value="RUS ближ">RUS ближ</option>
   <option value="RUS даль">RUS даль</option>
   <option value="BY">BY</option>

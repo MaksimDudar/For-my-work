@@ -1,14 +1,14 @@
 <h1>List of tracks</h1>
 <p><%= link_to 'NEW Track', track_path([:new]) %></p><hr/>
 
-<% @tracks.each do |track| %>
+<% @tracks.each do |track| %><hr/>
 <p><%= track.created_at %></p>
-<%= track.pl %>
-<%= track.truck_by %>
-<%= track.driver_by %>
-<%= track.perecep %>
-<%= track.truck_rus %>
-<%= track.driver_rus %>
-<%= track.semi_trailer %>
-<%= track.country %>
+<%= track.pl %> ||
+<%= track.truck_by %> ||
+<%= track.driver_by %> ||
+<%= track.perecep %> ||
+<%= track.truck_rus %> ||
+<%= track.driver_rus %> ||
+<%= track.semi_trailer %> ||
+<%= track.country %> ||
 <% end %>
