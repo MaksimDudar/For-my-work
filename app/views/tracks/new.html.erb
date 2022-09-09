@@ -2,7 +2,6 @@
 
 <%= form_for :track, url: tracks_path do |f| %>
 <p><label>PL перевзчик:</label>
-
 <select id="pl" name="track[pl]">
   <option value=" " selected="selected"></option>
   <option value="Чужой">Чужой</option>
@@ -13,7 +12,16 @@
   <option value="WGM3639F">WGM3639F</option>
   <option value="WPR6744P">WPR6744P</option>
 </select>
+<label>№ Поляка:</label>
+<%= f.text_field :pl2 %>
 </p>
+
+<p><label>Перецеп/довоз:</label>
+<select id="perecep2" name="track[perecep2]">
+  <option value=" " selected="selected"></option>
+  <option value="Перецеп">Перецеп</option>
+  <option value="Перегруз">Перегруз</option>
+</select></p>
 
 <p><label>Тягач BY:</label>
 <select id="truck_by" name="track[truck_by]">
@@ -87,7 +95,6 @@
 <select id="perecep" name="track[perecep]">
   <option value=" " selected="selected"></option>
   <option value="Перецеп">Перецеп</option>
-  <option value="Перегруз">Перегруз</option>
   <option value="Довоз">Довоз</option>
 </select></p>
 
@@ -119,6 +126,8 @@
   <option value="Кот Андрей Геннадьевич">Кот Андрей Геннадьевич</option>
   <option value="Сидорчук Максим Николаевич">Сидорчук Максим Николаевич</option>
   <option value="Скурко Эдуард Николаевич">Скурко Эдуард Николаевич</option>
+  <option value="Симонович Василий Петрович">Симонович Василий Петрович</option>
+
 </select></p>
 
 <p><label>Прицеп:</label>
@@ -176,6 +185,11 @@
   <option value="RUS ближ">RUS ближ</option>
   <option value="RUS даль">RUS даль</option>
   <option value="BY">BY</option>
+  <option value="KZ">KZ</option>
+  <option value="KG">KG</option>
+  <option value="UZ">UZ</option>
+  <option value="AZ">AZ</option>
+  <option value="TJ">TJ</option>
 </select></p>
 
   <p>

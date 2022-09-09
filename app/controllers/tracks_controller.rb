@@ -39,7 +39,7 @@ class TracksController < ApplicationController
 
 
   def track_params
-    params.require(:track).permit(:pl, :truck_by, :driver_by, :perecep, :truck_rus, :driver_rus, :semi_trailer, :country)
+    params.require(:track).permit(:pl, :pl2, :perecep2, :truck_by, :driver_by, :perecep, :truck_rus, :driver_rus, :semi_trailer, :country)
     end
 
   end
