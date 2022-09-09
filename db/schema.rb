@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_081541) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_09_09_122220) do
   create_table "tracks", force: :cascade do |t|
     t.string "pl"
     t.string "truck_by"
@@ -23,6 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_081541) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pl2"
+    t.string "perecep2"
   end
 
 end
