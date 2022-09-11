@@ -1,6 +1,7 @@
-<h1>Edit Article</h1>
+<h1>Исправить слежение</h1>
 
-<%= form_for :track, url: track_path(@track), method: :patch do |f| %>
+<div class="bg-success p-2 text-dark bg-opacity-25">
+<%= form_for :track, url: tracks_path do |f| %>
 <p><label>PL перевзчик:</label>
 <select id="pl" name="track[pl]">
   <option value=" " selected="selected"></option>
@@ -193,7 +194,8 @@
 </select></p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Сохранить', class:"btn btn-sm btn-primary rounded-pill" %>
   </p>
 
 <% end %>
+</div>
