@@ -14,3 +14,31 @@
 <%= @track.driver_rus %> |
 <%= @track.semi_trailer %> |
 <%= @track.country %>
+
+<p class="fs-5 fw-semibold">Все комментарии</p>
+<% @track.comments.each do |comment| %>
+    <i><%= comment.author %>:</i><br/>
+    <%= comment.body %>
+    <% end %></p>
+
+<p class="fs-5 fw-semibold">Добавить комментарий</p>
+
+<p>
+  <%= form_for([@track, @track.comments.build]) do |f| %>
+    <p>
+
+    <div class="form-group mb-1 w-50">
+      <%= f.label :Имя, class: "form-label" %><br />
+      <%= f.text_field :author, class: "form-control" %>
+    </div>
+
+    <p>
+      <%= f.label :Комментарий %><br />
+      <%= f.text_area :body %>
+    </p>
+
+    <p>
+      <%= f.submit 'Сохранить', class:"btn btn-sm btn-primary" %>
+    </p>
+
+  <% end %>

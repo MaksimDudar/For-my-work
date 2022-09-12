@@ -13,9 +13,9 @@
 
     <div class="d-grid gap-2 d-md-flex ">
       <% if user_signed_in? %>
-      Hello, <%= current_user.username %><%= button_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-secondary btn-sm"  %>
+      Привет, <%= current_user.username %><%= button_to "Выход", destroy_user_session_path, method: :delete, class:"btn btn-secondary btn-sm"  %>
       <% else %>
-      <%= button_to "Log in", new_user_session_path, class:"btn btn-secondary btn-sm"  %>
+      <%= button_to "Вход", new_user_session_path, class:"btn btn-secondary btn-sm"  %>
       <% end %>
     </div>
 
