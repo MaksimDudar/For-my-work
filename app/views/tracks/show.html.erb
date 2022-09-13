@@ -30,12 +30,12 @@
     <div class="form-group mb-1 w-50">
       <%= f.label :Имя, class: "form-label" %><br />
       <%= f.text_field :author, class: "form-control" %>
-    </div>
 
     <p>
-      <%= f.label :Комментарий %><br />
-      <%= f.text_area :body %>
+      <%= f.label :Комментарий, class: "form-label" %><br />
+      <%= f.text_area :body, class: "form-control" %>
     </p>
+    </div>
 
     <p>
       <%= f.submit 'Сохранить', class:"btn btn-sm btn-primary" %>
