@@ -17,8 +17,8 @@
 
 <p class="fs-5 fw-semibold">Все комментарии</p>
 <% @track.comments.each do |comment| %>
-    <i><%= comment.author %>:</i><br/>
-    <%= comment.body %>
+    <p><strong> <i><%= comment.author %>:</i></strong> <br/>
+    <%= comment.body %><br/></p>
     <% end %></p>
 
 <p class="fs-5 fw-semibold">Добавить комментарий</p>

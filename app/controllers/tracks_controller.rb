@@ -4,7 +4,6 @@ class TracksController < ApplicationController
   def index
     @tracks = Track.all
     @tracks = Track.order(created_at: :desc)
-
   end
 
   def show
