@@ -1,7 +1,7 @@
 <h1>Исправить слежение</h1>
 
 <div class="bg-success p-2 text-dark bg-opacity-25">
-<%= form_for :track, url: tracks_path do |f| %>
+<%= form_for :track, url: track_path(@track), method: :patch do |f| %>
 <p><label>PL перевзчик:</label>
 <select id="pl" name="track[pl]">
   <option value=" " selected="selected"></option>
