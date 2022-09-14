@@ -2,8 +2,11 @@ class TracksController < ApplicationController
   before_action :authenticate_user!, :only => [:new, :create]
 
   def index
-    @tracks = Track.all
-    @tracks = Track.order(created_at: :desc)
+    if params[:search]
+      @tracks = Track.search(params[:search]).order("created_at DESC")
+    else
+      @tracks = Track.all.order('created_at DESC')
+    end
   end
 
   def show
@@ -43,10 +46,7 @@ class TracksController < ApplicationController
     redirect_to tracks_path
   end
 
-
-
-
-
+private
   def track_params
     params.require(:track).permit(:pl, :pl2, :perecep2, :truck_by, :driver_by, :perecep, :truck_rus, :driver_rus, :semi_trailer, :country)
     end
