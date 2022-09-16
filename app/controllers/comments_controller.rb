@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
 
   def create
     @track = Track.find(params[:track_id])
-    @track.comments.create(comment_params)
+    @comment = @track.comments.create(comment_params)
+    @comment.id = current_user.username
     redirect_to track_path(@track)
   end
 private

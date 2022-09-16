@@ -19,10 +19,10 @@
 <%= @track.country %></p>
 
 <p class="fs-5 fw-semibold">Все комментарии:</p>
-<% @track.comments.each do |comment| %>
-    <p><strong> <i><%= comment.author %>:</i></strong> <br/>
-    <%= comment.body %><br/></p>
-    <% end %></p>
+  <% @track.comments.each do |comment| %>
+    <p><strong> <i><p><%= current_user.username %>:</i></strong> <br/></p>
+    <p><%= comment.body %></p>
+  <% end %>
 
 <p class="fs-5 fw-semibold">Добавить комментарий:</p>
 
@@ -31,9 +31,6 @@
     <p>
 
     <div class="form-group mb-1 w-50">
-      <%= f.label :Имя, class: "form-label" %><br />
-      <%= f.text_field :author, class: "form-control" %>
-
     <p>
       <%= f.label :Комментарий, class: "form-label" %><br />
       <%= f.text_area :body, class: "form-control" %>
