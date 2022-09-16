@@ -12,20 +12,20 @@
   </div>
 
   <div class="field">
-  <%= f.label :username %><br />
+  <%= f.label :username, "Имя" %><br />
   <%= f.text_field :username, autocomplete: "username", class:"form-control mb-1 w-25"  %>
 </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "Пароль" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> знаков минимум)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", class:"form-control mb-1 w-25" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "Повторите пароль" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control mb-1 w-25" %>
   </div>
 
