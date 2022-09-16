@@ -20,7 +20,7 @@
 
 <p class="fs-5 fw-semibold">Все комментарии:</p>
   <% @track.comments.each do |comment| %>
-    <p><strong> <i><p><%= current_user.username %>:</i></strong> <br/></p>
+    <p><strong> <i><p><%= comment.author %>:</i></strong> <br/></p>
     <p><%= comment.body %></p>
   <% end %>
 
