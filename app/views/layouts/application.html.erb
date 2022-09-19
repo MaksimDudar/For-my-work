@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Track</title>
+    <title>Слежение</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,8 +12,13 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-    <div class="d-grid gap-2 d-md-flex ">
+        <div class="col-md-3">
+        <a class="link-primary navbar-brand" href="/">Главная страница</a></div>
+          <div class="col-md-3">
+          <%= link_to 'Показать все треки', tracks_path %> </div>
+          <div class="col-md-3">
+          <%= link_to 'Новое слежение', track_path([:new]) %></div>
+    <div class="col-md-3 d-grid gap-2 d-md-flex ">
       <% if user_signed_in? %>
       Привет, <%= current_user.username %><%= button_to "Выход", destroy_user_session_path, method: :delete, class:"btn btn-secondary btn-sm"  %>
       <% else %>
@@ -27,7 +32,6 @@
     <%= yield %>
     </div>
   </div>
-</div>
 
   </body>
 </html>
