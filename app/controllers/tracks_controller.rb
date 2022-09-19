@@ -17,8 +17,8 @@ class TracksController < ApplicationController
   end
 
   def create
-
     @track = Track.new(track_params)
+    @track.username = current_user.username
     if @track.save
       redirect_to @track
     else
@@ -41,8 +41,9 @@ class TracksController < ApplicationController
 
   def destroy
     @track = Track.find(params[:id])
+    if current_user.username == @track.username
     @track.destroy
-
+  end
     redirect_to tracks_path
   end
 
@@ -50,5 +51,4 @@ private
   def track_params
     params.require(:track).permit(:pl, :pl2, :perecep2, :truck_by, :driver_by, :perecep, :truck_rus, :driver_rus, :semi_trailer, :country)
     end
-
   end

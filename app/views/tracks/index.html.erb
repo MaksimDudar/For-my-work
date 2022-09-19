@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="p-3 mb-2 bg-info text-dark bg-opacity-25">
-  <h1>Слежение</h1>
+  <h1>Слежение</h1></div>
 
 <p><%= form_tag(tracks_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Найти тягач/прицеп" %>
@@ -23,15 +23,16 @@ PL:<%= track.pl %> ||
 <%= track.semi_trailer %> ||
 <%= track.country %> ||
 <p>
-
 <p class="fst-italic"><%= track.comments.pluck(:body)%></p>
-  <%= link_to 'Показать', track_path(track), class:"link-primary" %> ||
-  <%= link_to 'Изменить', edit_track_path(track), class:"link-primary" %>
+<%= link_to 'Показать', track_path(track), class:"link-primary" %>
+<% if current_user.username == track.username %>
+
+  || <%= link_to 'Изменить', edit_track_path(track), class:"link-primary" %>
   <%= button_to 'Удалить', track_path(track), method: :delete, data: { turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-sm btn-danger", style:"--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .65rem;" %>
+<% end %>
 </div>
 
   <hr />
-
 <% end %>
     </div>
   </div>
