@@ -25,8 +25,7 @@ PL:<%= track.pl %> ||
 <p>
 <p class="fst-italic"><%= track.comments.pluck(:body)%></p>
 <%= link_to 'Показать', track_path(track), class:"link-primary" %>
-<% if current_user.username == track.username %>
-
+<% if current_user.username == track.username or current_user.id == 1 %>
   || <%= link_to 'Изменить', edit_track_path(track), class:"link-primary" %>
   <%= button_to 'Удалить', track_path(track), method: :delete, data: { turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-sm btn-danger", style:"--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .65rem;" %>
 <% end %>
