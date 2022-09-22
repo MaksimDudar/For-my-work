@@ -1,7 +1,7 @@
 databases:
-  - name: track
-    databaseName: development
-    user: maksim
+  - name: mysite
+    databaseName: mysite
+    user: mysite
 
 services:
   - type: web
