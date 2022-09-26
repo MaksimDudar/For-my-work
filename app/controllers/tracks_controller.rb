@@ -41,7 +41,7 @@ class TracksController < ApplicationController
 
   def destroy
     @track = Track.find(params[:id])
-    if current_user.username == @track.username or current_user.id == 1
+    if current_user.username == @track.username
     @track.destroy
   end
     redirect_to tracks_path
