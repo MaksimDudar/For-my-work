@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create]
+  before_action :authenticate_user!, :only => [:new, :create, :index]
 
   def index
     if params[:search]
